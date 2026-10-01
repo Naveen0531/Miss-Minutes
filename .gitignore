@@ -1,0 +1,59 @@
+# ─────────────────────────────────────────────
+# Android
+# ─────────────────────────────────────────────
+*.class
+*.log
+.gradle/
+local.properties
+.idea/
+.DS_Store
+build/
+captures/
+.externalNativeBuild/
+.cxx/
+*.kotlin_module
+
+# Android Keystore (NEVER commit these)
+*.jks
+*.keystore
+
+# LLM Models (too large for git)
+*.litertlm
+*.task
+*.onnx
+*.bin
+*.gguf
+
+# Generated model assets
+app/src/main/assets/models/
+
+# ─────────────────────────────────────────────
+# Python / Jarvis Agent
+# ─────────────────────────────────────────────
+# Environment files with secrets (NEVER commit)
+.env
+.env.local
+.env.*
+!.env.example
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+*.egg
+
+# Virtual environments
+venv/
+.venv/
+env/
+ENV/
+
+# ─────────────────────────────────────────────
+# Misc
+# ─────────────────────────────────────────────
+.kilo/
+Thumbs.db

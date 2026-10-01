@@ -1,0 +1,61 @@
+version: "3.9"
+
+# ─────────────────────────────────────────────────────────────────────
+# J.A.R.V.I.S. Local Infrastructure Stack
+# Runs: LiveKit Server + Kokoro TTS + faster-whisper STT
+#
+# Start with:  docker compose up -d
+# Stop with:   docker compose down
+# ─────────────────────────────────────────────────────────────────────
+
+services:
+
+  # ── LiveKit Server (WebRTC signaling + media relay) ──────────────────
+  livekit:
+    image: livekit/livekit-server:latest
+    command: --dev --bind 0.0.0.0
+    ports:
+      - "7880:7880"       # WebSocket signaling (Android connects here)
+      - "7881:7881"       # TCP media fallback
+      - "50100-50200:50100-50200/udp"  # UDP media range
+    environment:
+      - LIVEKIT_KEYS=devkey:devsecret
+    restart: unless-stopped
+
+  # ── Kokoro TTS (warm, expressive voice — British male: bm_lewis) ─────
+  # Voice options: af_heart, af_sky, bf_emma, bm_lewis, am_adam, etc.
+  kokoro:
+    image: ghcr.io/remsky/kokoro-fastapi-cpu:v0.2.2
+    ports:
+      - "8880:8880"
+    environment:
+      - KOKORO_DEFAULT_VOICE=bm_lewis
+    restart: unless-stopped
+    # Uncomment below for GPU acceleration (NVIDIA only):
+    # deploy:
+    #   resources:
+    #     reservations:
+    #       devices:
+    #         - driver: nvidia
+    #           count: 1
+    #           capabilities: [gpu]
+    # image: ghcr.io/remsky/kokoro-fastapi-gpu:v0.2.2
+
+  # ── Faster-Whisper STT server (local speech recognition) ─────────────
+  whisper:
+    image: fedirz/faster-whisper-server:latest-cpu
+    ports:
+      - "9000:8000"
+    environment:
+      - WHISPER__MODEL=Systran/faster-whisper-small
+      # Use 'base' for fastest, 'medium' for better accuracy
+    restart: unless-stopped
+    # GPU version:
+    # image: fedirz/faster-whisper-server:latest-cuda
+    # deploy:
+    #   resources:
+    #     reservations:
+    #       devices:
+    #         - driver: nvidia
+    #           count: 1
+    #           capabilities: [gpu]

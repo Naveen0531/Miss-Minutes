@@ -1,0 +1,14 @@
+# J.A.R.V.I.S. Agent Requirements
+# Install with: pip install -r requirements.txt
+
+# LiveKit Agents framework (voice + video orchestration)
+livekit-agents[openai,silero]>=1.5.0
+
+# Env file loading
+python-dotenv>=1.0.0
+
+# Image processing for camera vision frames
+Pillow>=10.0.0
+
+# Token generation for Android client
+livekit-api>=0.7.0

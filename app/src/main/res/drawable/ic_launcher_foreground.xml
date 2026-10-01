@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Miss Minutes clock face icon foreground -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Outer amber ring -->
+    <path
+        android:pathData="M54,10 A44,44 0 1,1 53.9,10 Z"
+        android:strokeColor="#FF8C42"
+        android:strokeWidth="3"
+        android:fillColor="#00000000" />
+
+    <!-- Inner dark circle -->
+    <path
+        android:pathData="M54,14 A40,40 0 1,1 53.9,14 Z"
+        android:fillColor="#150900" />
+
+    <!-- Left eye -->
+    <path
+        android:pathData="M40,48 A5,5 0 1,1 39.9,48 Z"
+        android:fillColor="#FF8C42" />
+    <path
+        android:pathData="M40,48 A2.5,2.5 0 1,1 39.9,48 Z"
+        android:fillColor="#150900" />
+
+    <!-- Right eye -->
+    <path
+        android:pathData="M68,48 A5,5 0 1,1 67.9,48 Z"
+        android:fillColor="#FF8C42" />
+    <path
+        android:pathData="M68,48 A2.5,2.5 0 1,1 67.9,48 Z"
+        android:fillColor="#150900" />
+
+    <!-- Smile arc -->
+    <path
+        android:pathData="M40,62 Q54,74 68,62"
+        android:strokeColor="#FF8C42"
+        android:strokeWidth="2.5"
+        android:fillColor="#00000000"
+        android:strokeLineCap="round" />
+
+    <!-- Clock hand -->
+    <path
+        android:pathData="M54,54 L54,30"
+        android:strokeColor="#FF8C42"
+        android:strokeWidth="2"
+        android:strokeLineCap="round" />
+
+    <!-- Center dot -->
+    <path
+        android:pathData="M54,54 A2,2 0 1,1 53.9,54 Z"
+        android:fillColor="#FFAA66" />
+
+    <!-- Hour marks -->
+    <path android:pathData="M54,14 L54,18" android:strokeColor="#FF8C42" android:strokeWidth="2" android:strokeLineCap="round"/>
+    <path android:pathData="M76,21 L73.5,25" android:strokeColor="#FF8C42" android:strokeWidth="2" android:strokeLineCap="round"/>
+    <path android:pathData="M90,40 L86,41.5" android:strokeColor="#FF8C42" android:strokeWidth="2" android:strokeLineCap="round"/>
+    <path android:pathData="M94,54 L90,54" android:strokeColor="#FF8C42" android:strokeWidth="2" android:strokeLineCap="round"/>
+    <path android:pathData="M90,68 L86,66.5" android:strokeColor="#FF8C42" android:strokeWidth="2" android:strokeLineCap="round"/>
+    <path android:pathData="M76,87 L73.5,83" android:strokeColor="#FF8C42" android:strokeWidth="2" android:strokeLineCap="round"/>
+    <path android:pathData="M54,94 L54,90" android:strokeColor="#FF8C42" android:strokeWidth="2" android:strokeLineCap="round"/>
+    <path android:pathData="M32,87 L34.5,83" android:strokeColor="#FF8C42" android:strokeWidth="2" android:strokeLineCap="round"/>
+    <path android:pathData="M18,68 L22,66.5" android:strokeColor="#FF8C42" android:strokeWidth="2" android:strokeLineCap="round"/>
+    <path android:pathData="M14,54 L18,54" android:strokeColor="#FF8C42" android:strokeWidth="2" android:strokeLineCap="round"/>
+    <path android:pathData="M18,40 L22,41.5" android:strokeColor="#FF8C42" android:strokeWidth="2" android:strokeLineCap="round"/>
+    <path android:pathData="M32,21 L34.5,25" android:strokeColor="#FF8C42" android:strokeWidth="2" android:strokeLineCap="round"/>
+
+</vector>

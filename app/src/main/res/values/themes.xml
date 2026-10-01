@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Legacy theme for window background before Compose takes over -->
+    <style name="Theme.MissMinutes" parent="android:Theme.Material.NoActionBar.Fullscreen">
+        <item name="android:windowBackground">@color/tva_background</item>
+        <item name="android:statusBarColor">@color/tva_background</item>
+        <item name="android:navigationBarColor">@color/tva_background</item>
+    </style>
+</resources>

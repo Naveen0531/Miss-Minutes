@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="tva_background">#0A0604</color>
+    <color name="tva_amber">#FF8C42</color>
+    <color name="tva_surface">#150900</color>
+</resources>

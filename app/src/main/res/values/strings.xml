@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Miss Minutes</string>
+    <string name="tva_greeting">Well hey there, partner!</string>
+    <string name="mic_permission_rationale">Miss Minutes needs your microphone to hear your questions, sugar!</string>
+    <string name="device_unsupported">Your device isn\'t quite TVA-standard for LLM inference.</string>
+    <string name="model_loading">Loading TVA archives...</string>
+    <string name="status_idle">Tap to speak</string>
+    <string name="status_listening">Listening...</string>
+    <string name="status_thinking">Thinking...</string>
+    <string name="status_speaking">Speaking</string>
+</resources>
